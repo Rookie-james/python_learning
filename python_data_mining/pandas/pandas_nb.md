@@ -181,7 +181,20 @@ df2.fillna(method="ffill",limit=1,axis=1)	# axis=可以修改填充方向
 
 ### 4、数据的汇总处理
 
-
+```python
+# 透视表功能
+pd.pivot_table(data, values=None, index=None, columns=None, aggfunc='mean',
+fill_value=None, margins=False, dropna=True, margins_name='All')
+# data：指定需要构造透视表的数据集
+# values：指定需要拉入“数值” 框的字段列表
+# index：指定需要拉入“行标签” 框的字段列表
+# columns：指定需要拉入“列标签” 框的字段列表
+# aggfunc：指定数值的统计函数，默认为统计均值，也可以指定numpy模块中的其他统计函数
+# fill_value：指定一个标量，用于填充缺失值
+# margins： bool类型参数，是否需要显示行或列的总计值，默认为False
+# dropna： bool类型参数，是否需要删除整列为缺失的字段，默认为True
+# margins_name：指定行或列的总计名称，默认为All
+```
 
 
 
